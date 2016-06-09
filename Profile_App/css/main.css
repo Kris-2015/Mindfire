@@ -1,0 +1,16 @@
+#page-border{
+	border:1px solid #000000;
+
+}
+
+#image{
+	position:relative;
+	left:50%;
+}
+#address{
+	position:absolute;
+	bottom: 
+}
+.body{
+	background-image:url("../image/profile.jpg");
+}
