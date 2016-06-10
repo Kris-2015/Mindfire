@@ -33,7 +33,7 @@
             		<h2><u>PERSONAL INFORMATION</u></h2><br>
             		
             		<div class="row">
-                 		<div class="col-xs-12 col-lg-11 col-md-11" id="name">
+                 		<div class="col-xs-12 col-lg-12 col-md-12" id="name">
                  			<div class="form-group">
                 		 		<label for="fname">First Name:</label>
                          		<input type="text" class="form-control" id="fname" name="first_name" placeholder="First Name" />
@@ -53,21 +53,23 @@
                  	</div>
 
                     <br /><br />
-                    <div class="form-group">
-                    	 <label for="prefix" class="control-label col-sm-4">Prefix:</label>
+                    
+                        <div class="form-group">
+                         <label for="prefix" class="control-label col-sm-4">Prefix:</label>
                          <div class="control-label col-sm-8">
-                         	<label class="radio-inline"><input type="radio" name="prefix" />Mr.</label>
-                         	<label class="radio-inline"><input type="radio" name="prefix" />Mrs.</label>
-                         </div> 	
+                            <label class="radio-inline"><input type="radio" name="prefix" />Mr.</label>
+                            <label class="radio-inline"><input type="radio" name="prefix" />Mrs.</label>
+                         </div>     
                     </div>
                     
-                    <div class="form-group" id="gender">
-                    	 <label for="gender" class="control-label col-sm-4">Gender:</label>
+                    <div class="form-group" id="gender"> 
+                         <label for="gender" class="control-label col-sm-4">Gender:</label>
                          <div class="control-label col-sm-8">
-                         	<label class="radio-inline"><input type="radio" name="gender" />Male</label>
-                         	<label class="radio-inline"><input type="radio" name="gender" />Female</label>
-                         </div> 	
+                            <label class="radio-inline"><input type="radio" name="gender" value="male" />Male</label>
+                            <label class="radio-inline"><input type="radio" name="gender" value="female">Female</label>
+                         </div>     
                     </div>
+                
 
                     <br><br>
 
@@ -78,13 +80,66 @@
 							</div>
 					</div>
 					<br><br>
-					<div class="form-group">
-                    	 <label for="mstatus" class="control-label col-sm-6">Martial Status:</label>
-                         <div class="control-label col-sm-6">
-                         	<label class="radio-inline"><input type="radio" name="mstatus" />Single</label>
-                         	<label class="radio-inline"><input type="radio" name="mstatus" />Married</label>
-                         </div> 	
+
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="form-group">
+                                <label class="control-label col-xs-12" for="Mstatus">Maritial Status:</label>
+                            </div>
+                            <label class="radio-inline"><input type="radio" name="Mstatus" value="single">Single</label>
+                                   
+                            <label class="radio-inline"><input type="radio" name="Mstatus" value="married">Married</label>
+                        </div>
                     </div>
+
+                    <br><br>
+                    
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="form-group">
+                              <label for="employment" class="control-label col-xs-4">Employment:</label>
+                              <div class="col-xs-8">
+                                <label class="radio-inline"><input type="radio" name="employment" value="employed">Employed  </label>
+                                <label class="radio-inline"><input type="radio" name="employment" value="unemployed">Employed  </label>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br><br>
+
+                    <div class="form-group">
+                      <label class="control-label col-xs-4" for="employer">Employer:</label>
+                        <div class="col-xs-8">
+                           <input type="text" class="form-control" name="employer" id="employer" placeholder="Employer">
+                        </div>
+                    </div>
+                    <br><br>
+
+                    <!-- Image Upload -->
+                            <div class="form-group">
+                                <label class="control-label col-xs-4">Image Upload:</label>
+                                <div class="col-xs-8">
+                                <div class="input-group image-preview">
+                                    <input type="text" class="form-control image-preview-filename" disabled="disabled" >
+                                        <span class="input-group-btn">
+                                            <!-- Image preview-clear button -->
+
+                                            <button type="button" class="btn btn-default image-preview-clear" style="display:none;">
+                                                <span class="glyphicon glyphicon-remove"></span>Clear
+                                            </button>
+                                            <!-- image-preview-input -->
+
+                                            <div class="btn btn-default image-preview-input">
+                                                <span class="glyphicon glyphicon-folder-open"></span>
+                                                <span class="image-preview-input-title">Browse</span>
+                                                <input type="file" name="user_image" accept="image/png, image/jpeg, image/gif" />
+                                            </div>
+                                        </span>
+                                </div>
+                            </div>
+                            </div>
+                            
+                            <!-- Image Upload task ends -->
             	</form>
             </div> 
         </div>
