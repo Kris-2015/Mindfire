@@ -13,7 +13,7 @@
       <nav class="navbar navbar-inverse">
          <div class="container-fluid">
             <ul class="nav navbar-nav navbar-right">
-               <li><a href="#registration"><span class="glyphicon glyphicon-user"></span>Sign-up</a></li>
+               <li><a href="/registration.php"><span class="glyphicon glyphicon-user"></span>Sign-up</a></li>
                <li><a href="#login"><span class="glyphicon glyphicon-user"></span>Login</a></li>
             </ul>
          </div>
@@ -23,7 +23,8 @@
          <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                <div class="well well-lg">
-                  <form class="form-inline" role="form" method="POST" action="db_test.php">
+                  <form class="form-inline" role="form" method="POST" action="db_test.php"
+                     enctype="multipart/form-data">
                      <h2><u>PERSONAL INFORMATION</u></h2>
                      <div class="form-group">
                         <label for="fname">First Name:</label>
@@ -31,7 +32,7 @@
                      </div>
                      <div class="form-group">
                         <label for="mname">Middle Name:</label>
-                        <input type="text" class="form-control" id="mname" name="middle_name" placeholder="Middle Name" />  
+                        <input type="text" class="form-control" id="mname" name="middle_name" placeholder="Middle Name" />    
                      </div>
                      <div class="form-group">
                         <label for="lname">Last Name:</label>
@@ -41,15 +42,15 @@
                      <div class="form-group">
                         <label for="prefix" class="control-label col-lg-3">Prefix:</label>
                         <div class="col-lg-8">
-                           <label class="radio-inline"><input type="radio" name="prefix" value="mr"/>Mr</label>
-                           <label class="radio-inline"><input type="radio" name="prefix" value="mrs"/>Mrs</label>
+                           <label class="radio-inline"><input type="radio" name="prefix" value="Mr"/>Mr</label>
+                           <label class="radio-inline"><input type="radio" name="prefix" value="Mrs"/>Mrs</label>
                         </div>
                      </div>
                      <div class="form-group">
                         <label for="gender" class="control-label col-lg-3">Gender:</label>
                         <div class="col-lg-8">
-                           <label class="radio-inline"><input type="radio" name="gender" value="male"/>Male</label>
-                           <label class="radio-inline"><input type="radio" name="gender" value="female"/>Female</label>
+                           <label class="radio-inline"><input type="radio" name="gender" value="Male"/>Male</label>
+                           <label class="radio-inline"><input type="radio" name="gender" value="Female"/>Female</label>
                         </div>
                      </div>
                      <br /><br />
@@ -65,8 +66,8 @@
                            <div class="form-group">
                               <label class="control-label col-lg-8" for="marital_status">Marital Status:</label>
                            </div>
-                           <label class="radio-inline"><input type="radio" name="marital_status" value="single" />Single</label>
-                           <label class="radio-inline"><input type="radio" name="marital_status" value="married" />Married</label>
+                           <label class="radio-inline"><input type="radio" name="marital_status" value="Single" />Single</label>
+                           <label class="radio-inline"><input type="radio" name="marital_status" value="Married" />Married</label>
                         </div>
                      </div>
                      <br />
@@ -75,8 +76,8 @@
                            <div class="form-group">
                               <label class="control-label col-lg-4" for="employment">Employment:</label>
                               <div class="col-lg-8">
-                                 <label class="radio-inline"><input type="radio" name="employment" value="employed" />Employed</label>
-                                 <label class="radio-inline"><input type="radio" name="employment" value="unemployed" />Unemployed</label>
+                                 <label class="radio-inline"><input type="radio" name="employment" value="Employed" />Employed</label>
+                                 <label class="radio-inline"><input type="radio" name="employment" value="Unemployed" />Unemployed</label>
                               </div>
                            </div>
                         </div>
@@ -104,12 +105,13 @@
                                  <div class="btn btn-default image-preview-input">
                                     <span class="glyphicon glyphicon-folder-open"></span>
                                     <span class="image-preview-input-title">Browse</span>
-                                    <input type="file" name="image" accept="image/png, image/jpeg, image/gif" />
+                                    <input type="file" name="image" accept="image/jpg, image/png, image/jpeg, image/gif" />
                                  </div>
                               </span>
                            </div>
                         </div>
                      </div>
+                     <?php  include ("image_upload.php"); ?>
                      <!-- Image Upload task ends -->
                      <br />
                      <hr class="hr" />
